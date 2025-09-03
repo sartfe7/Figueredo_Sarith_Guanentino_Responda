@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="style.css">
 <?php
 // filepath: c:\xampp\htdocs\guanentino_responda\crear_opciones.php
 $id_pregunta = isset($_GET['id_pregunta']) ? intval($_GET['id_pregunta']) : 0;

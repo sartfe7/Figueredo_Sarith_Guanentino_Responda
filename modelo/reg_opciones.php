@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="style.css">
+
 <?php
 // filepath: c:\xampp\htdocs\guanentino_responda\modelo\subir_opciones.php
 require "conexion.php";

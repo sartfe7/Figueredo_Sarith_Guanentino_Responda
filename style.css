@@ -1,0 +1,287 @@
+/* 🌸 RESET CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 🌸 Fondo general */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #ffe6f0;
+    color: #b84d75;
+    text-align: center;
+    min-height: 100vh;
+}
+
+/* 🌸 Contenedor principal */
+.container {
+    padding: 30px;
+}
+
+/* 🌸 Encabezado */
+header h1 {
+    font-size: 2.2rem;
+    color: #cc3366;
+    margin-bottom: 10px;
+}
+
+header h3 {
+    font-weight: normal;
+    margin-bottom: 30px;
+    color: #804d66;
+}
+
+/* 🌸 Esquinas decorativas */
+.corner {
+    position: absolute;
+    width: 100px;
+    height: auto;
+    top: 10px;
+}
+
+.corner-left {
+    left: 10px;
+}
+
+.corner-right {
+    right: 10px;
+}
+
+/* 🌸 Imagen central */
+.center-image img {
+    width: 1000px;
+    height: 1000px;
+    border-radius: 20px;
+    border: 4px solid #ff99cc;
+    box-shadow: 0px 6px 18px rgba(255, 153, 204, 0.5);
+    margin: 20px auto;
+    display: block;
+}
+
+/* 🌸 Controles de tamaño */
+.resize-controls {
+    margin:50px 0;
+    font-size: 0.9rem;
+    color: #804d66;
+}
+
+.resize-controls input {
+    padding: 5px;
+    margin: 0 5px;
+    border: 2px solid #ffb3d9;
+    border-radius: 8px;
+    text-align: center;
+    width: 80px;
+}
+
+.resize-controls button {
+    padding: 8px 15px;
+    background: #ff99cc;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.resize-controls button:hover {
+    background: #ff66b2;
+}
+
+/* 🌸 Botones principales */
+.main-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 30px auto;
+    max-width: 400px;
+}
+
+.btn {
+    display: block;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #ff99cc, #ff66b2);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    box-shadow: 0px 4px 10px rgba(255, 102, 178, 0.5);
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #ff66b2, #ff3399);
+    transform: scale(1.05);
+}
+
+.login-btn {
+    background: linear-gradient(135deg, #ff80bf, #ff3399);
+}
+/* 🌸 Botones principales */
+.main-buttons {
+    display: flex;
+    flex-direction: column;  /* siguen en columna */
+    gap: 20px;               /* separa los botones */
+    margin: 40px auto;
+    max-width: 420px;
+    align-items: center;     /* los centra */
+}
+
+.btn {
+    display: inline-block;
+    width: 100%;             /* ocupa todo el ancho del contenedor */
+    max-width: 400px;        /* límite de ancho */
+    padding: 14px 25px;
+    background: linear-gradient(135deg, #ff99cc, #ff66b2);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    box-shadow: 0px 4px 10px rgba(255, 102, 178, 0.5);
+    transition: 0.3s ease-in-out;
+    text-align: center;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #ff66b2, #ff3399);
+    transform: scale(1.05);
+}
+
+/* 🌸 Roles (Admin, Docente, Digitador) */
+.roles.horizontal {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.role-card {
+    background: #fff0f6;
+    border: 2px solid #ffb3d9;
+    border-radius: 20px;
+    padding: 20px;
+    width: 180px;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(255, 153, 204, 0.4);
+    transition: transform 0.2s ease-in-out;
+}
+
+.role-card:hover {
+    transform: translateY(-5px);
+}
+
+.role-card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    border: 3px solid #ff99cc;
+    background: white;
+}
+
+.role-card h4 {
+    margin-bottom: 10px;
+    color: #cc3366;
+}
+/* 🌸 Login container */
+.login-container {
+    background: #fff0f6;
+    border: 2px solid #ffb3d9;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 30px 25px;
+    box-shadow: 0px 5px 15px rgba(255, 102, 178, 0.3);
+    text-align: center;
+}
+
+.login-container h1 {
+    color: #cc3366;
+    margin-bottom: 10px;
+}
+
+.login-container h3 {
+    color: #804d66;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+/* 🌸 Formulario de login */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-form label {
+    text-align: left;
+    font-weight: bold;
+    color: #b84d75;
+    font-size: 0.95rem;
+}
+
+.login-form input {
+    padding: 10px;
+    border: 2px solid #ffb3d9;
+    border-radius: 12px;
+    outline: none;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.login-form input:focus {
+    border-color: #ff66b2;
+    box-shadow: 0px 0px 6px rgba(255, 102, 178, 0.5);
+}
+
+/* 🌸 Botón login */
+.login-form .btn {
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+}
+/* 🌸 Contenedor general de páginas */
+.content-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: justify;
+}
+
+/* 🌸 Título de la página */
+.page-title {
+    text-align: center;
+    color: #ff4da6;
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+/* 🌸 Caja de texto */
+.text-box {
+    background: #ffe6f2;
+    border: 2px solid #ffb3d9;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 6px 14px rgba(255, 102, 178, 0.3);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #4d0033;
+}
+
+/* 🌸 Listas */
+.text-box ul {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.text-box ul li {
+    margin-bottom: 10px;
+    list-style: "🌸 ";
+}

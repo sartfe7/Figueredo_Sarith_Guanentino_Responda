@@ -1,40 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenido a la Pagina del administrador</title>
-    <a>Bienvenido a la Página del administrador</a>
-
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Admin</title>
-    <center>
-        <h1>Bienvenido a ¡Guanentino, responda!</h1>
-        <br><br>
-        <a href="registrar_pregunta.php">
-        <button type = "submit">Crear Pregunta</button>
-        </a>
-        <br><br>
-
-        <a href="modelo/home.php">
-        <button type = "submit">Registrar Usuario</button>
-        </a>
-        </a>
-        <br><br>
-        <br><br>
-    </center>
-    <h1></h1>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página del Administrador</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+  <div class="content-container">
+    <h1 class="page-title">🌸 Bienvenido Administrador a ¡Guanentino, Responda!</h1>
+
+    <div class="admin-options">
+      <!-- Opción 1 -->
+      <div class="option-card">
+        <img src="img/pregunta.png" alt="Crear Pregunta" class="option-img">
+        <a href="registrar_pregunta.php" class="btn">✏️ Crear Pregunta</a>
+      </div>
+
+      <!-- Opción 2 -->
+      <div class="option-card">
+        <img src="img/usuario.png" alt="Registrar Usuario" class="option-img">
+        <a href="modelo/home.php" class="btn">👥 Registrar Usuario</a>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
-</head>
-<body>
-    
-</body>
-</html>
+
+

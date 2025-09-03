@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="style.css">
 <?php
     // script para crear una conexión con la BD
 
