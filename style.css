@@ -1,397 +1,900 @@
-/* 🌸 RESET CSS */
+/* Reset y configuración base */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* 🌸 Fondo general */
 body {
-    font-family: 'Poppins', sans-serif;
-    background: #ffe6f0;
-    color: #b84d75;
-    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
-/* 🌸 Contenedor principal */
-.container {
-    padding: 30px;
+/* Contenedores principales */
+.container, .content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
-/* 🌸 Encabezado */
+/* ========== ESTILOS PARA INDEX.PHP ========== */
+
+/* Header principal del index */
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: white;
+    z-index: 10;
+    position: relative;
+}
+
 header h1 {
-    font-size: 2.2rem;
-    color: #cc3366;
-    margin-bottom: 10px;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+    background: linear-gradient(45deg, #ff6b6b, #ffd93d, #6bcf7f, #4d9de0, #ff9a9e);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 6s ease-in-out infinite;
+    letter-spacing: 2px;
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    25% { background-position: 100% 50%; }
+    50% { background-position: 100% 100%; }
+    75% { background-position: 0% 100%; }
 }
 
 header h3 {
-    font-weight: normal;
-    margin-bottom: 30px;
-    color: #804d66;
+    font-size: 1.6rem;
+    font-weight: 300;
+    opacity: 0.95;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
 
-/* 🌸 Esquinas decorativas */
+/* Imágenes decorativas del index */
 .corner {
     position: absolute;
-    width: 100px;
-    height: auto;
-    top: 10px;
+    width: 180px;
+    height: 180px;
+    opacity: 0.4;
+    z-index: 1;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
 }
 
 .corner-left {
-    left: 10px;
+    top: 30px;
+    left: 30px;
+    animation: floatLeft 6s ease-in-out infinite;
 }
 
 .corner-right {
-    right: 10px;
+    top: 30px;
+    right: 30px;
+    animation: floatRight 6s ease-in-out infinite reverse;
 }
 
-/* 🌸 Imagen central */
-.center-image img {
-    width: 1000px;
-    height: 1000px;
-    border-radius: 20px;
-    border: 4px solid #ff99cc;
-    box-shadow: 0px 6px 18px rgba(255, 153, 204, 0.5);
-    margin: 20px auto;
-    display: block;
+@keyframes floatLeft {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
 }
 
-/* 🌸 Controles de tamaño */
-.resize-controls {
-    margin:50px 0;
-    font-size: 0.9rem;
-    color: #804d66;
+@keyframes floatRight {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(-5deg); }
 }
 
-.resize-controls input {
-    padding: 5px;
-    margin: 0 5px;
-    border: 2px solid #ffb3d9;
-    border-radius: 8px;
+.corner:hover {
+    opacity: 0.7;
+    transform: scale(1.1);
+}
+
+/* Imagen central del index */
+.center-image {
+    margin: 3rem 0;
     text-align: center;
-    width: 80px;
+    z-index: 10;
+    position: relative;
 }
 
-.resize-controls button {
-    padding: 8px 15px;
-    background: #ff99cc;
-    border: none;
-    border-radius: 20px;
-    color: white;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.resize-controls button:hover {
-    background: #ff66b2;
-}
-
-/* 🌸 Botones principales */
-.main-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin: 30px auto;
-    max-width: 400px;
-}
-
-.btn {
-    display: block;
-    padding: 12px 20px;
-    background: linear-gradient(135deg, #ff99cc, #ff66b2);
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+.center-image img {
+    max-width: 350px;
+    height: auto;
     border-radius: 30px;
-    box-shadow: 0px 4px 10px rgba(255, 102, 178, 0.5);
-    transition: 0.3s ease-in-out;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+    transition: all 0.4s ease;
+    border: 5px solid rgba(255,255,255,0.3);
 }
 
-.btn:hover {
-    background: linear-gradient(135deg, #ff66b2, #ff3399);
-    transform: scale(1.05);
+.center-image img:hover {
+    transform: scale(1.08) rotateY(10deg);
+    box-shadow: 0 35px 80px rgba(0,0,0,0.5);
 }
 
-.login-btn {
-    background: linear-gradient(135deg, #ff80bf, #ff3399);
-}
-/* 🌸 Botones principales */
-.main-buttons {
-    display: flex;
-    flex-direction: column;  /* siguen en columna */
-    gap: 20px;               /* separa los botones */
-    margin: 40px auto;
-    max-width: 420px;
-    align-items: center;     /* los centra */
+/* Botones del index */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 900px;
+    margin-top: 2rem;
+    z-index: 10;
+    position: relative;
 }
 
 .btn {
     display: inline-block;
-    width: 100%;             /* ocupa todo el ancho del contenedor */
-    max-width: 400px;        /* límite de ancho */
-    padding: 14px 25px;
-    background: linear-gradient(135deg, #ff99cc, #ff66b2);
-    color: white;
+    padding: 1.8rem 2.5rem;
+    background: rgba(255, 255, 255, 0.98);
+    color: #333;
     text-decoration: none;
-    font-weight: bold;
     border-radius: 30px;
-    box-shadow: 0px 4px 10px rgba(255, 102, 178, 0.5);
-    transition: 0.3s ease-in-out;
+    font-size: 1.3rem;
+    font-weight: 600;
     text-align: center;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    backdrop-filter: blur(15px);
+    border: 3px solid transparent;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+    transition: left 0.6s;
+}
+
+.btn:hover::before {
+    left: 100%;
 }
 
 .btn:hover {
-    background: linear-gradient(135deg, #ff66b2, #ff3399);
-    transform: scale(1.05);
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+    background: linear-gradient(45deg, #667eea, #764ba2, #f093fb);
+    color: white;
+    border-color: rgba(255,255,255,0.5);
 }
 
-/* 🌸 Roles (Admin, Docente, Digitador) */
+.login-btn {
+    background: linear-gradient(45deg, #ff6b6b, #ffd93d, #ff9a9e);
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 700;
+    border: 3px solid rgba(255,255,255,0.3);
+}
+
+.login-btn:hover {
+    background: linear-gradient(45deg, #ffd93d, #ff6b6b, #ff9a9e);
+    transform: translateY(-12px) scale(1.08);
+    box-shadow: 0 30px 80px rgba(255,107,107,0.4);
+}
+
+/* ========== ESTILOS PARA PÁGINAS DE INFORMACIÓN ========== */
+
+/* Títulos de páginas */
+.page-title {
+    font-size: 3.2rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 3rem;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+    background: linear-gradient(45deg, #ff6b6b, #ffd93d, #6bcf7f);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 4s ease-in-out infinite;
+    letter-spacing: 1px;
+}
+
+/* Cajas de contenido para saber11.php, guanentino_r.php, generalidades_cg.php */
+.text-box {
+    background: rgba(255, 255, 255, 0.98);
+    padding: 3.5rem;
+    border-radius: 30px;
+    margin: 2rem auto;
+    max-width: 1000px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255,255,255,0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.text-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+    border-radius: 30px 30px 0 0;
+}
+
+.text-box h2 {
+    color: #667eea;
+    margin: 2.5rem 0 1.5rem 0;
+    font-size: 2rem;
+    position: relative;
+    font-weight: 600;
+}
+
+.text-box h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border-radius: 2px;
+}
+
+.text-box p {
+    margin-bottom: 1.8rem;
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: #555;
+    text-align: justify;
+}
+
+.text-box ul, .text-box ol {
+    margin: 2rem 0;
+    padding-left: 2.5rem;
+}
+
+.text-box li {
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+    position: relative;
+}
+
+.text-box li::marker {
+    color: #667eea;
+    font-weight: bold;
+}
+
+.text-box li strong {
+    color: #667eea;
+    font-weight: 600;
+}
+
+.text-box a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.text-box a:hover {
+    border-bottom-color: #667eea;
+    transform: translateY(-1px);
+}
+
+/* ========== ESTILOS PARA INICIAR_SESION.PHP ========== */
+
+/* Tarjetas de roles */
 .roles.horizontal {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
-    margin-top: 40px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 3rem;
 }
 
 .role-card {
-    background: #fff0f6;
-    border: 2px solid #ffb3d9;
-    border-radius: 20px;
-    padding: 20px;
-    width: 180px;
+    background: rgba(255, 255, 255, 0.98);
+    padding: 3rem 2rem;
+    border-radius: 30px;
     text-align: center;
-    box-shadow: 0px 5px 15px rgba(255, 153, 204, 0.4);
-    transition: transform 0.2s ease-in-out;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+    backdrop-filter: blur(15px);
+    border: 3px solid transparent;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.role-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(102, 126, 234, 0.15) 0%, transparent 70%);
+    transform: scale(0);
+    transition: transform 0.6s ease;
+}
+
+.role-card:hover::before {
+    transform: scale(1);
 }
 
 .role-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 35px 80px rgba(0,0,0,0.35);
+    border-color: #667eea;
 }
 
 .role-card img {
     width: 100px;
     height: 100px;
-    margin-bottom: 10px;
+    margin-bottom: 1.5rem;
     border-radius: 50%;
-    border: 3px solid #ff99cc;
-    background: white;
+    border: 4px solid #667eea;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+    object-fit: cover;
 }
 
-.role-card h4 {
-    margin-bottom: 10px;
-    color: #cc3366;
+.role-card:hover img {
+    border-color: #764ba2;
+    transform: scale(1.1);
 }
-/* 🌸 Login container */
-.login-container {
-    background: #fff0f6;
-    border: 2px solid #ffb3d9;
-    border-radius: 20px;
-    width: 90%;
-    max-width: 400px;
-    margin: 80px auto;
-    padding: 30px 25px;
-    box-shadow: 0px 5px 15px rgba(255, 102, 178, 0.3);
+
+/* ========== ESTILOS PARA HOME_ADMIN.PHP ========== */
+
+/* Opciones de administrador */
+.admin-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+    width: 100%;
+    max-width: 900px;
+    margin-top: 3rem;
+}
+
+.option-card {
+    background: rgba(255, 255, 255, 0.98);
+    padding: 3.5rem 2.5rem;
+    border-radius: 30px;
     text-align: center;
-}
-
-.login-container h1 {
-    color: #cc3366;
-    margin-bottom: 10px;
-}
-
-.login-container h3 {
-    color: #804d66;
-    font-weight: normal;
-    margin-bottom: 25px;
-}
-
-/* 🌸 Formulario de login */
-.login-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.login-form label {
-    text-align: left;
-    font-weight: bold;
-    color: #b84d75;
-    font-size: 0.95rem;
-}
-
-.login-form input {
-    padding: 10px;
-    border: 2px solid #ffb3d9;
-    border-radius: 12px;
-    outline: none;
-    font-size: 1rem;
-    transition: 0.3s;
-}
-
-.login-form input:focus {
-    border-color: #ff66b2;
-    box-shadow: 0px 0px 6px rgba(255, 102, 178, 0.5);
-}
-
-/* 🌸 Botón login */
-.login-form .btn {
-    padding: 12px;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 25px;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+    backdrop-filter: blur(15px);
+    border: 3px solid transparent;
+    position: relative;
+    overflow: hidden;
     cursor: pointer;
 }
-/* 🌸 Contenedor general de páginas */
-.content-container {
-    max-width: 1000px;
-    margin: 50px auto;
-    padding: 20px;
-    text-align: justify;
+
+.option-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
 }
 
-/* 🌸 Título de la página */
-.page-title {
-    text-align: center;
-    color: #ff4da6;
-    font-size: 2.2rem;
-    margin-bottom: 25px;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+.option-card:hover::after {
+    transform: scaleX(1);
 }
 
-/* 🌸 Caja de texto */
-.text-box {
-    background: #ffe6f2;
-    border: 2px solid #ffb3d9;
-    border-radius: 20px;
-    padding: 25px;
-    box-shadow: 0 6px 14px rgba(255, 102, 178, 0.3);
-    font-size: 1.05rem;
-    line-height: 1.8;
-    color: #4d0033;
+.option-card:hover {
+    transform: translateY(-15px) scale(1.03);
+    box-shadow: 0 30px 70px rgba(0,0,0,0.35);
+    border-color: #667eea;
 }
 
-/* 🌸 Listas */
-.text-box ul {
-    margin: 20px 0;
-    padding-left: 20px;
+.option-img {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 2rem;
+    border-radius: 50%;
+    border: 5px solid #667eea;
+    padding: 15px;
+    background: white;
+    transition: all 0.3s ease;
+    object-fit: cover;
 }
 
-.text-box ul li {
-    margin-bottom: 10px;
-    list-style: "🌸 ";
-
-}
-/* Opciones en fila */
-.admin-options {
-    display: flex;
-    justify-content: center;
-    gap: 60px; /* espacio entre opciones */
+.option-card:hover .option-img {
+    border-color: #764ba2;
+    transform: scale(1.1) rotate(5deg);
 }
 
-/* Tarjeta */
-.option-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    background: #ffe4ec;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-    width: 200px;
-}
-/* Botón */
-.btn {
-    display: inline-block;
-    padding: 10px 18px;
-    background-color: #d63384;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 10px;
-    font-weight: bold;
-    transition: background 0.3s;
+/* ========== ESTILOS PARA HOME_DOCENTE.PHP ========== */
+
+/* Botones específicos para docente */
+button[type="submit"] {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 1.5rem 3rem;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.btn:hover {
-    background-color: #b42a6f;
+button[type="submit"]:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(102, 126, 234, 0.4);
+    background: linear-gradient(45deg, #764ba2, #f093fb);
 }
-/* Caja general */
+
+/* ========== ESTILOS PARA REGISTRAR_PREGUNTA.PHP ========== */
+
+/* Formularios */
 .form-box {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 800px;
-    margin: 20px auto;
-    background: #fff0f6;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.98);
+    padding: 3.5rem;
+    border-radius: 30px;
+    margin: 2rem auto;
+    max-width: 900px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255,255,255,0.3);
+    position: relative;
 }
 
-/* Secciones con fieldset */
+.form-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+    border-radius: 30px 30px 0 0;
+}
+
 .form-box fieldset {
-    border: 2px solid #f5c2e7;
-    border-radius: 10px;
-    padding: 15px 20px;
-    background: #ffffff;
+    border: 3px solid #667eea;
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin: 2.5rem 0;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(240, 147, 251, 0.05));
+    position: relative;
 }
 
 .form-box legend {
-    font-weight: bold;
-    color: #a02263;
-    padding: 0 8px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+    border: 2px solid rgba(255,255,255,0.2);
 }
 
-/* Inputs y selects */
-.form-box input[type="text"],
-.form-box input[type="url"],
-.form-box textarea,
+.form-box label {
+    display: block;
+    margin: 2rem 0 0.8rem 0;
+    font-weight: 600;
+    color: #333;
+    font-size: 1.15rem;
+}
+
+.form-box input, 
+.form-box textarea, 
 .form-box select {
     width: 100%;
-    padding: 12px;
-    margin-top: 6px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 15px;
+    padding: 1.2rem;
+    border: 3px solid #e1e5e9;
+    border-radius: 20px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: rgba(255,255,255,0.9);
+    margin-bottom: 1.5rem;
+    font-family: inherit;
+}
+
+.form-box input:focus, 
+.form-box textarea:focus, 
+.form-box select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.2);
+    transform: translateY(-3px);
+    background: white;
+}
+
+.form-box textarea {
     resize: vertical;
+    min-height: 120px;
+    font-family: inherit;
 }
 
-/* Etiquetas */
-.form-box label {
-    margin-top: 12px;
-    font-weight: bold;
-    color: #444;
-}
-
-/* Botón */
-.form-box .btn {
-    align-self: center;
-    margin-top: 15px;
-    padding: 14px 30px;
-    background: #d63384;
-    border: none;
-    border-radius: 12px;
-    color: #fff;
-    font-size: 17px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
-}
-
-.form-box .btn:hover {
-    background: #b42a6f;
-    transform: scale(1.05);
-}
-
-/* Digitador info */
 .digitador-info {
-    font-size: 14px;
-    color: #555;
-    margin-top: 8px;
-    text-align: right;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    padding: 1.5rem 2.5rem;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 2rem 0;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    border: 2px solid rgba(255,255,255,0.2);
+}
+
+/* ========== ESTILOS PARA REGISTRAR_OPCIONES.PHP ========== */
+
+/* Opciones de respuesta */
+.opcion {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2.5rem;
+    margin: 2rem 0;
+    border-radius: 20px;
+    border-left: 6px solid #667eea;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.opcion::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(180deg, #667eea, #764ba2, #f093fb);
+    border-radius: 0 20px 20px 0;
+}
+
+.opcion:hover {
+    transform: translateX(15px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    background: white;
+}
+
+.opcion hr {
+    border: none;
+    height: 3px;
+    background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+    margin: 1.5rem 0;
+    border-radius: 2px;
+}
+
+.opcion input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    accent-color: #667eea;
+}
+
+/* Botones para agregar opciones */
+button[type="button"] {
+    background: linear-gradient(45deg, #6bcf7f, #4d9de0);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(107, 207, 127, 0.3);
+    margin: 1rem 0.5rem;
+}
+
+button[type="button"]:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(107, 207, 127, 0.4);
+    background: linear-gradient(45deg, #4d9de0, #6bcf7f);
+}
+
+/* ========== EFECTOS GLOBALES Y ANIMACIONES ========== */
+
+/* Efectos de partículas de fondo */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 60% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+    animation: particleFloat 20s linear infinite;
+}
+
+@keyframes particleFloat {
+    0%, 100% { opacity: 0.3; transform: translateY(0px); }
+    50% { opacity: 0.1; transform: translateY(-20px); }
+}
+
+/* Animación de entrada para elementos */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.content-container > *:nth-child(1) {
+    animation: slideInUp 0.8s ease-out forwards;
+}
+
+.content-container > *:nth-child(2) {
+    animation: slideInLeft 0.8s ease-out 0.2s forwards;
+    opacity: 0;
+}
+
+.content-container > *:nth-child(3) {
+    animation: slideInRight 0.8s ease-out 0.4s forwards;
+    opacity: 0;
+}
+
+.content-container > *:nth-child(n+4) {
+    animation: slideInUp 0.8s ease-out 0.6s forwards;
+    opacity: 0;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+@media (max-width: 1024px) {
+    .container, .content-container {
+        padding: 15px;
+    }
+    
+    .corner {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .center-image img {
+        max-width: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container, .content-container {
+        padding: 10px;
+    }
+    
+    header h1, .page-title {
+        font-size: 2.8rem;
+    }
+    
+    header h3 {
+        font-size: 1.3rem;
+    }
+    
+    .buttons, .roles.horizontal, .admin-options {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .text-box, .form-box {
+        padding: 2.5rem 2rem;
+        margin: 1rem;
+    }
+    
+    .corner {
+        width: 80px;
+        height: 80px;
+        top: 15px;
+    }
+    
+    .corner-left { left: 15px; }
+    .corner-right { right: 15px; }
+    
+    .center-image img {
+        max-width: 250px;
+    }
+    
+    .btn {
+        padding: 1.5rem 2rem;
+        font-size: 1.2rem;
+    }
+    
+    .role-card, .option-card {
+        padding: 2.5rem 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1, .page-title {
+        font-size: 2.2rem;
+        letter-spacing: 1px;
+    }
+    
+    header h3 {
+        font-size: 1.1rem;
+    }
+    
+    .btn {
+        padding: 1.3rem 1.5rem;
+        font-size: 1.1rem;
+    }
+    
+    .text-box, .form-box {
+        padding: 2rem 1.5rem;
+        border-radius: 20px;
+    }
+    
+    .role-card, .option-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .corner {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .center-image img {
+        max-width: 200px;
+    }
+    
+    .form-box fieldset {
+        padding: 2rem 1.5rem;
+    }
+    
+    .opcion {
+        padding: 2rem 1.5rem;
+    }
+}
+
+/* ========== UTILIDADES Y MEJORAS ========== */
+
+/* Scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Selección personalizada */
+::selection {
+    background: rgba(102, 126, 234, 0.3);
+    color: #333;
+}
+
+::-moz-selection {
+    background: rgba(102, 126, 234, 0.3);
+    color: #333;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 14px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border-radius: 7px;
+    border: 2px solid rgba(255,255,255,0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #764ba2, #f093fb);
+}
+
+/* Estados de carga */
+.loading {
+    opacity: 0.7;
+    pointer-events: none;
+    position: relative;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgba(102, 126, 234, 0.3);
+    border-top: 3px solid #667eea;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Enlaces adicionales */
+a:not(.btn) {
+    color: #667eea;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+a:not(.btn):hover {
+    color: #764ba2;
+    border-bottom-color: #764ba2;
+}
+
+/* Mensajes de estado */
+.success-message {
+    background: linear-gradient(45deg, #6bcf7f, #4d9de0);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    margin: 1rem 0;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(107, 207, 127, 0.3);
+}
+
+.error-message {
+    background: linear-gradient(45deg, #ff6b6b, #ff9a9e);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    margin: 1rem 0;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
 }
