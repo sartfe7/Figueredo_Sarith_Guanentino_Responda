@@ -898,3 +898,502 @@ a:not(.btn):hover {
     text-align: center;
     box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
 }
+/* ===== FORMULARIO DE REGISTRO ===== */
+.form-box {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.form-box fieldset {
+    border: 2px solid #4CAF50;
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+
+.form-box legend {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4CAF50;
+    padding: 0 10px;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+    color: #333;
+}
+
+.form-group i {
+    margin-right: 8px;
+    color: #4CAF50;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 0.8rem;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 6px rgba(76, 175, 80, 0.3);
+}
+
+/* ===== BOTÓN REGISTRO ===== */
+.register-btn {
+    background: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 0.9rem 1.8rem;
+    font-size: 1rem;
+    border-radius: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.register-btn:hover {
+    background: #43a047;
+    transform: scale(1.05);
+}
+
+.register-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* ===== LINKS ADICIONALES ===== */
+.additional-links {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.additional-links a {
+    color: #4CAF50;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.additional-links a:hover {
+    color: #388e3c;
+    text-decoration: underline;
+}
+
+/* ===== INFO CARDS ===== */
+.info-cards {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.info-card {
+    background: #fff;
+    border-radius: 1.2rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    text-align: center;
+    max-width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.icon-wrapper {
+    background: #4CAF50;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+
+.info-card h4 {
+    margin: 0.5rem 0;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.info-card p {
+    font-size: 0.95rem;
+    color: #555;
+}
+/* ===== RESET GENERAL ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===== CONTENEDOR PRINCIPAL ===== */
+.content-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* ===== HEADER ===== */
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+header h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #666;
+}
+
+/* ===== FORMULARIO ===== */
+.form-box {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+    max-width: 600px;
+    margin: 0 auto 3rem;
+}
+
+.form-box fieldset {
+    border: 2px solid #4CAF50;
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+
+.form-box legend {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4CAF50;
+    padding: 0 10px;
+}
+
+/* Grupo de inputs */
+.form-group {
+    margin-bottom: 1.2rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: #333;
+}
+
+.form-group i {
+    margin-right: 6px;
+    color: #4CAF50;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 0.8rem;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 6px rgba(76, 175, 80, 0.4);
+}
+
+/* Botón */
+.register-btn {
+    background: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.register-btn:hover {
+    background: #43a047;
+    transform: scale(1.05);
+}
+
+.register-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* ===== ENLACES ADICIONALES ===== */
+.additional-links {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.additional-links a {
+    color: #4CAF50;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.additional-links a:hover {
+    color: #2e7d32;
+    text-decoration: underline;
+}
+
+/* ===== INFO CARDS ===== */
+.info-cards {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.info-card {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 260px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.icon-wrapper {
+    background: #4CAF50;
+    color: #fff;
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.6rem;
+}
+
+.info-card h4 {
+    margin: 0.5rem 0;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.info-card p {
+    font-size: 0.95rem;
+    color: #555;
+}
+/* ======= Configuración general ======= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #3f51b5, #9c27b0); /* Azul -> Morado */
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  /* ======= Contenedor principal ======= */
+  .content-container {
+    max-width: 1000px;
+    width: 100%;
+    background: #fff;
+    border-radius: 15px;
+    padding: 2rem 3rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* ======= Header ======= */
+  header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    color: #3f51b5; /* Azul */
+    margin-bottom: 0.5rem;
+  }
+  
+  header h3 {
+    font-size: 1.2rem;
+    color: #9c27b0; /* Morado */
+    font-weight: normal;
+  }
+  
+  /* ======= Formulario ======= */
+  .form-box fieldset {
+    border: 2px solid #3f51b5;
+    border-radius: 10px;
+    padding: 2rem;
+  }
+  
+  .form-box legend {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #3f51b5;
+    padding: 0 10px;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+    transition: transform 0.2s;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus {
+    border-color: #9c27b0;
+    box-shadow: 0 0 6px rgba(156, 39, 176, 0.4);
+  }
+  
+  /* ======= Botón de registro ======= */
+  .register-btn {
+    background: linear-gradient(135deg, #3f51b5, #9c27b0);
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  .register-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #303f9f, #7b1fa2);
+  }
+  
+  /* ======= Links adicionales ======= */
+  .additional-links {
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+  
+  .additional-links a {
+    color: #3f51b5;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .additional-links a:hover {
+    color: #9c27b0;
+    text-decoration: underline;
+  }
+  
+  /* ======= Tarjetas de información ======= */
+  .info-cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .info-card {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 12px;
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  }
+  
+  .icon-wrapper {
+    background: linear-gradient(135deg, #3f51b5, #9c27b0);
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .info-card h4 {
+    margin-bottom: 0.5rem;
+    color: #3f51b5;
+  }
+  
+  .info-card p {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  

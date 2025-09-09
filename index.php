@@ -11,7 +11,7 @@
 
         <!-- Imágenes en las esquinas superiores -->
         <img src="img/esquina1.png" alt="Decoración izquierda" class="corner corner-left">
-        <img src="img/esquina2.png" alt="Decoración derecha" class="corner corner-right">
+        <img src="img/logoSistemas (1).png" alt="Decoración derecha" class="corner corner-right">
 
         <!-- Imagen central -->
         <div class="center-image">
@@ -26,7 +26,8 @@
             
             <a href="iniciar_secion.php" class="btn login-btn">🔐 Iniciar Sesión</a>
         </div>
-
+        <br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/hXTJCmqZCAk?si=-FyUYGRLNmPLjxk_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 </body>
 </html>

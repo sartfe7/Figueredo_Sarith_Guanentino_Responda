@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<body><img src="img/images.png" alt="Decoración izquierda" class="corner corner-left">
+<img src="img/guanenta.jpg" alt="Decoración derecha" class="corner corner-right">
   <div class="content-container">
     <h1 class="page-title">🌸 Generalidades del Colegio San José de Guanentá</h1>
 

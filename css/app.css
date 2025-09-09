@@ -1,0 +1,6 @@
+
+body { background-color: #f8f9fb; }
+.card { border-radius: 1rem; box-shadow: 0 8px 30px rgba(0,0,0,.06); }
+.form-control, .btn { border-radius: .5rem; }
+.table { background: #fff; }
+.alert { border-radius: .5rem; }

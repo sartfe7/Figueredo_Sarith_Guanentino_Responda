@@ -6,8 +6,10 @@
   <title>Estrategia Guanentino, Responda!</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body><img src="img/co.jpg" alt="Decoración izquierda" class="corner corner-left">
+<img src="img/c.jpg" alt="Decoración derecha" class="corner corner-right">
   <div class="content-container">
+  
     <h1 class="page-title">🌸 Estrategia "¡Guanentino, responda!"</h1>
 
     <div class="text-box">
@@ -41,7 +43,7 @@
         En el aspecto técnico, la estrategia se sustenta en <strong>HTML, CSS, PHP y MySQL</strong>, 
         bajo el patrón <strong>MVC</strong> y alojada en <em>Infinity Free</em>.  
       </p>
-
+   
       <p>
         <strong>En síntesis:</strong> "¡Guanentino, responda!" es una plataforma educativa integral que 
         apoya a docentes y estudiantes, priorizando la comprensión, retroalimentación y motivación 

@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<body><img src="img/iii.png" alt="Decoración izquierda" class="corner corner-left">
+<img src="img/icfes.png" alt="Decoración derecha" class="corner corner-right">
   <div class="content-container">
     <h1 class="page-title">📘 Examen Saber 11.º</h1>
 
