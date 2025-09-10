@@ -64,4 +64,8 @@ if ($id_pregunta <= 0) {
         <button type="submit">Guardar opciones</button>
     </form>
 </body>
+
+</body>
+</html>
+
 </html>
